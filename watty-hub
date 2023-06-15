@@ -56,7 +56,7 @@ local autofish = false
 local autofishtool = "Basic Fishing Net"
 local autofishies = {}
 local autofarmkart = false
-local autovote = true
+local autovote = false
 local autovotesetting = {}
 local killbarbs = false
 local autoarrest = false
@@ -1582,7 +1582,7 @@ end)
 local Vote = Tabs.Farming:AddRightGroupbox("Auto Vote Exploits")
 Vote:AddToggle('autoVote', {
     Text = 'Auto Vote',
-    Default = true,
+    Default = false,
     Tooltip = 'Automatically votes for you',
 })
 Toggles.autoVote:OnChanged(function()
