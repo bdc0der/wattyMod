@@ -50,14 +50,14 @@ local buildingstorepairtable = {}
 local autosickle = false
 local autosickletool = "Basic Sickle"
 local autochop = true
-local autochoptree = {OG_MONEY}
+local autochoptree = {}
 local autochoptool = "Basic Axe"
 local autofish = false
 local autofishtool = "Basic Fishing Net"
 local autofishies = {}
 local autofarmkart = false
 local autovote = true
-local autovotesetting = {YES}
+local autovotesetting = {}
 local killbarbs = false
 local autoarrest = false
 local autoarrestteam = {}
@@ -1483,7 +1483,7 @@ end)
 Axe:AddDropdown('chopToolToUse', {
     Values = { 'Basic Axe', 'Good Axe', 'Best Axe' },
     Default = 1,
-    Multi = false,
+    Multi = true,
     Text = 'Tool To Use',
     Tooltip = 'Tool to use when auto chop trees is active',
 })
@@ -1582,7 +1582,7 @@ end)
 local Vote = Tabs.Farming:AddRightGroupbox("Auto Vote Exploits")
 Vote:AddToggle('autoVote', {
     Text = 'Auto Vote',
-    Default = false,
+    Default = true,
     Tooltip = 'Automatically votes for you',
 })
 Toggles.autoVote:OnChanged(function()
