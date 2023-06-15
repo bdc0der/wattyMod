@@ -1156,7 +1156,7 @@ end)();
 
 
 local Window = ui:CreateWindow({
-    Title = "Watty Hub | GRG v3.0",
+    Title = "Watty Hub | GRG v3.2",
     Center = true, 
     AutoShow = true,
 })
