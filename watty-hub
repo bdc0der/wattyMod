@@ -1474,7 +1474,7 @@ end)
 local Axe = Tabs.Farming:AddLeftGroupbox("Axe Exploits")
 Axe:AddToggle('autoChop', {
     Text = 'Auto Chop Trees',
-    Default = false,
+    Default = true,
     Tooltip = 'Automatically chops selected trees',
 })
 Toggles.autoChop:OnChanged(function()
@@ -1492,7 +1492,7 @@ Options.chopToolToUse:OnChanged(function()
 end)
 Axe:AddDropdown('chopTrees', {
     Values = { 'OG_Money', 'OG_Fruit', 'OG_Normal', 'Present1', 'Present2', 'Present3', 'Present4' },
-    Default = 3,
+    Default = 1,
     Multi = true,
     Text = 'Trees To Chop',
     Tooltip = 'The trees auto chop trees will target',
