@@ -56,7 +56,7 @@ local autofish = false
 local autofishtool = "Basic Fishing Net"
 local autofishies = {}
 local autofarmkart = false
-local autovote = true
+local autovote = false
 local autovotesetting = {}
 local killbarbs = false
 local autoarrest = false
@@ -1492,7 +1492,7 @@ Options.chopToolToUse:OnChanged(function()
 end)
 Axe:AddDropdown('chopTrees', {
     Values = { 'OG_Money', 'OG_Fruit', 'OG_Normal', 'Present1', 'Present2', 'Present3', 'Present4' },
-    Default = 1,
+    Default = 3,
     Multi = true,
     Text = 'Trees To Chop',
     Tooltip = 'The trees auto chop trees will target',
@@ -1582,7 +1582,7 @@ end)
 local Vote = Tabs.Farming:AddRightGroupbox("Auto Vote Exploits")
 Vote:AddToggle('autoVote', {
     Text = 'Auto Vote',
-    Default = true,
+    Default = false,
     Tooltip = 'Automatically votes for you',
 })
 Toggles.autoVote:OnChanged(function()
