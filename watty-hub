@@ -1421,7 +1421,7 @@ end)
 local Hammer = Tabs.Farming:AddLeftGroupbox("Hammer Exploits")
 Hammer:AddToggle('autoRepair', {
     Text = 'Auto Repair',
-    Default = true,
+    Default = false,
     Tooltip = 'Repairs the damaged buildings',
 })
 Toggles.autoRepair:OnChanged(function()
@@ -1454,7 +1454,7 @@ end)
 local Sickle = Tabs.Farming:AddRightGroupbox("Sickle Exploits")
 Sickle:AddToggle('autoSickle', {
     Text = 'Auto Farm Rice',
-    Default = true,
+    Default = false,
     Tooltip = 'Farms rice with a sickle',
 })
 Toggles.autoSickle:OnChanged(function()
@@ -1474,7 +1474,7 @@ end)
 local Axe = Tabs.Farming:AddLeftGroupbox("Axe Exploits")
 Axe:AddToggle('autoChop', {
     Text = 'Auto Chop Trees',
-    Default = true,
+    Default = false,
     Tooltip = 'Automatically chops selected trees',
 })
 Toggles.autoChop:OnChanged(function()
@@ -1582,7 +1582,7 @@ end)
 local Vote = Tabs.Farming:AddRightGroupbox("Auto Vote Exploits")
 Vote:AddToggle('autoVote', {
     Text = 'Auto Vote',
-    Default = false,
+    Default = true,
     Tooltip = 'Automatically votes for you',
 })
 Toggles.autoVote:OnChanged(function()
