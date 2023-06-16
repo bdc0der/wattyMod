@@ -1421,7 +1421,7 @@ end)
 local Hammer = Tabs.Farming:AddLeftGroupbox("Hammer Exploits")
 Hammer:AddToggle('autoRepair', {
     Text = 'Auto Repair',
-    Default = false,
+    Default = true,
     Tooltip = 'Repairs the damaged buildings',
 })
 Toggles.autoRepair:OnChanged(function()
@@ -1440,7 +1440,7 @@ end)
 Hammer:AddDropdown('repairBuildings', {
     Values = { 'Stores', 'Gate', 'JailGate', 'Houses' },
     Default = 1,
-    Multi = true,
+    Multi = false,
     Text = 'Buildings To Repair',
     Tooltip = 'The buildings auto repair will target',
 })
@@ -1454,7 +1454,7 @@ end)
 local Sickle = Tabs.Farming:AddRightGroupbox("Sickle Exploits")
 Sickle:AddToggle('autoSickle', {
     Text = 'Auto Farm Rice',
-    Default = false,
+    Default = true,
     Tooltip = 'Farms rice with a sickle',
 })
 Toggles.autoSickle:OnChanged(function()
@@ -1483,7 +1483,7 @@ end)
 Axe:AddDropdown('chopToolToUse', {
     Values = { 'Basic Axe', 'Good Axe', 'Best Axe' },
     Default = 1,
-    Multi = true,
+    Multi = false,
     Text = 'Tool To Use',
     Tooltip = 'Tool to use when auto chop trees is active',
 })
@@ -1493,7 +1493,7 @@ end)
 Axe:AddDropdown('chopTrees', {
     Values = { 'OG_Money', 'OG_Fruit', 'OG_Normal', 'Present1', 'Present2', 'Present3', 'Present4' },
     Default = 1,
-    Multi = true,
+    Multi = false,
     Text = 'Trees To Chop',
     Tooltip = 'The trees auto chop trees will target',
 })
@@ -1507,7 +1507,7 @@ end)
 local Fishing = Tabs.Farming:AddRightGroupbox("Fishing Net Exploits")
 Fishing:AddToggle('autoFish', {
     Text = 'Auto Catch Fish',
-    Default = false,
+    Default = true,
     Tooltip = 'Automatically catches the selected fish',
 })
 Toggles.autoFish:OnChanged(function()
@@ -1526,7 +1526,7 @@ end)
 Fishing:AddDropdown('autoFishies', {
     Values = { 'Plankton', 'Small', 'Medium', 'LongMedium', 'CashCrab', 'Shark' },
     Default = 1,
-    Multi = true,
+    Multi = false,
     Text = 'Fish To Catch',
     Tooltip = 'The fish auto catch fish will target',
 })
