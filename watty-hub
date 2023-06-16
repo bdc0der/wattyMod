@@ -1430,7 +1430,7 @@ end)
 Hammer:AddDropdown('repairToolToUse', {
     Values = { 'Basic Hammer', 'Good Hammer', 'Best Hammer' },
     Default = 1,
-    Multi = false,
+    Multi = true,
     Text = 'Tool To Use',
     Tooltip = 'Tool to use when auto repair is active',
 })
@@ -1440,7 +1440,7 @@ end)
 Hammer:AddDropdown('repairBuildings', {
     Values = { 'Stores', 'Gate', 'JailGate', 'Houses' },
     Default = 1,
-    Multi = false,
+    Multi = true,
     Text = 'Buildings To Repair',
     Tooltip = 'The buildings auto repair will target',
 })
@@ -1463,7 +1463,7 @@ end)
 Sickle:AddDropdown('sickleToolToUse', {
     Values = { 'Basic Sickle', 'Good Sickle', 'Best Sickle' },
     Default = 1,
-    Multi = false,
+    Multi = true,
     Text = 'Tool To Use',
     Tooltip = 'Tool to use when auto farm rice is active',
 })
@@ -1483,7 +1483,7 @@ end)
 Axe:AddDropdown('chopToolToUse', {
     Values = { 'Basic Axe', 'Good Axe', 'Best Axe' },
     Default = 1,
-    Multi = false,
+    Multi = true,
     Text = 'Tool To Use',
     Tooltip = 'Tool to use when auto chop trees is active',
 })
@@ -1493,7 +1493,7 @@ end)
 Axe:AddDropdown('chopTrees', {
     Values = { 'OG_Money', 'OG_Fruit', 'OG_Normal', 'Present1', 'Present2', 'Present3', 'Present4' },
     Default = 1,
-    Multi = false,
+    Multi = true,
     Text = 'Trees To Chop',
     Tooltip = 'The trees auto chop trees will target',
 })
@@ -1516,7 +1516,7 @@ end)
 Fishing:AddDropdown('fishingToolToUse', {
     Values = { 'Basic Fishing Net', 'Good Fishing Net', 'Best Fishing Net' },
     Default = 1,
-    Multi = false,
+    Multi = true,
     Text = 'Tool To Use',
     Tooltip = 'Tool to use when auto catch fish is active',
 })
@@ -1526,7 +1526,7 @@ end)
 Fishing:AddDropdown('autoFishies', {
     Values = { 'Plankton', 'Small', 'Medium', 'LongMedium', 'CashCrab', 'Shark' },
     Default = 1,
-    Multi = false,
+    Multi = true,
     Text = 'Fish To Catch',
     Tooltip = 'The fish auto catch fish will target',
 })
@@ -1582,7 +1582,7 @@ end)
 local Vote = Tabs.Farming:AddRightGroupbox("Auto Vote Exploits")
 Vote:AddToggle('autoVote', {
     Text = 'Auto Vote',
-    Default = true,
+    Default = false,
     Tooltip = 'Automatically votes for you',
 })
 Toggles.autoVote:OnChanged(function()
