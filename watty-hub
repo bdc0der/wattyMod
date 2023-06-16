@@ -2,7 +2,7 @@ repeat wait() until game:IsLoaded() and game:GetService("Workspace").BarbStores:
 
 
 
-local version = game:HttpGet("https://raw.githubusercontent.com/bdc0der/wattyMod/main/version")
+local version = game:HttpGet("https://raw.githubusercontent.com/Wattville/Watty-Hub-Public/main/version")
 local ESP = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Sirius/request/library/esp/esp.lua'),true))()
 local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/Library.lua"))()
 local uiTheme = loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/addons/ThemeManager.lua"))()
@@ -29,7 +29,7 @@ if not LPH_OBFUSCATED then
 end
 
 
-local infjump = true
+local infjump = false
 local teleported = false
 local walkspeed = 16
 local jumppower = 50
@@ -49,14 +49,14 @@ local autorepairtool = "Basic Hammer"
 local buildingstorepairtable = {}
 local autosickle = false
 local autosickletool = "Basic Sickle"
-local autochop = true
+local autochop = false
 local autochoptree = {}
 local autochoptool = "Basic Axe"
 local autofish = false
 local autofishtool = "Basic Fishing Net"
 local autofishies = {}
 local autofarmkart = false
-local autovote = true
+local autovote = false
 local autovotesetting = {}
 local killbarbs = false
 local autoarrest = false
@@ -1156,7 +1156,7 @@ end)();
 
 
 local Window = ui:CreateWindow({
-    Title = "Watty Hub | GRG v3.2",
+    Title = "Watty Hub | GRG v3.0",
     Center = true, 
     AutoShow = true,
 })
@@ -1174,7 +1174,7 @@ local Tabs = {
 local Humanoid = Tabs.Player:AddLeftGroupbox("Humanoid Exploits")
 Humanoid:AddToggle('infJump', {
     Text = 'Infinite Jump',
-    Default = true,
+    Default = false,
     Tooltip = 'Allows you to jump on air',
 })
 Toggles.infJump:OnChanged(function()
@@ -1430,7 +1430,7 @@ end)
 Hammer:AddDropdown('repairToolToUse', {
     Values = { 'Basic Hammer', 'Good Hammer', 'Best Hammer' },
     Default = 1,
-    Multi = true,
+    Multi = false,
     Text = 'Tool To Use',
     Tooltip = 'Tool to use when auto repair is active',
 })
@@ -1463,7 +1463,7 @@ end)
 Sickle:AddDropdown('sickleToolToUse', {
     Values = { 'Basic Sickle', 'Good Sickle', 'Best Sickle' },
     Default = 1,
-    Multi = true,
+    Multi = false,
     Text = 'Tool To Use',
     Tooltip = 'Tool to use when auto farm rice is active',
 })
@@ -1483,7 +1483,7 @@ end)
 Axe:AddDropdown('chopToolToUse', {
     Values = { 'Basic Axe', 'Good Axe', 'Best Axe' },
     Default = 1,
-    Multi = true,
+    Multi = false,
     Text = 'Tool To Use',
     Tooltip = 'Tool to use when auto chop trees is active',
 })
@@ -1507,7 +1507,7 @@ end)
 local Fishing = Tabs.Farming:AddRightGroupbox("Fishing Net Exploits")
 Fishing:AddToggle('autoFish', {
     Text = 'Auto Catch Fish',
-    Default = true,
+    Default = false,
     Tooltip = 'Automatically catches the selected fish',
 })
 Toggles.autoFish:OnChanged(function()
@@ -1516,7 +1516,7 @@ end)
 Fishing:AddDropdown('fishingToolToUse', {
     Values = { 'Basic Fishing Net', 'Good Fishing Net', 'Best Fishing Net' },
     Default = 1,
-    Multi = true,
+    Multi = false,
     Text = 'Tool To Use',
     Tooltip = 'Tool to use when auto catch fish is active',
 })
