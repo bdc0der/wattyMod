@@ -49,7 +49,7 @@ local autorepairtool = "Basic Hammer"
 local buildingstorepairtable = {}
 local autosickle = false
 local autosickletool = "Basic Sickle"
-local autochop = true
+local autochop = false
 local autochoptree = {}
 local autochoptool = "Basic Axe"
 local autofish = false
@@ -1582,7 +1582,7 @@ end)
 local Vote = Tabs.Farming:AddRightGroupbox("Auto Vote Exploits")
 Vote:AddToggle('autoVote', {
     Text = 'Auto Vote',
-    Default = true,
+    Default = false,
     Tooltip = 'Automatically votes for you',
 })
 Toggles.autoVote:OnChanged(function()
