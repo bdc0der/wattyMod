@@ -49,7 +49,7 @@ local autorepairtool = "Basic Hammer"
 local buildingstorepairtable = {}
 local autosickle = false
 local autosickletool = "Basic Sickle"
-local autochop = false
+local autochop = true
 local autochoptree = {}
 local autochoptool = "Basic Axe"
 local autofish = false
@@ -1474,7 +1474,7 @@ end)
 local Axe = Tabs.Farming:AddLeftGroupbox("Axe Exploits")
 Axe:AddToggle('autoChop', {
     Text = 'Auto Chop Trees',
-    Default = false,
+    Default = true,
     Tooltip = 'Automatically chops selected trees',
 })
 Toggles.autoChop:OnChanged(function()
